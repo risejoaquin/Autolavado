@@ -9,5 +9,11 @@ package entities;
  * @author compu
  */
 public class VentaGeneral {
-    
+    private int folio = 0;
+    private double iva = 0;
+    private double total = 0;
+    private double subtotal = 0;
+    CatalogoServicio servicio = new CatalogoServicio();
+    RegistroVenta venta = new RegistroVenta();
+    AltaServicios selecservicio = new AltaServicios();
 }

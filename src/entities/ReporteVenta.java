@@ -9,5 +9,5 @@ package entities;
  * @author compu
  */
 public class ReporteVenta {
-    
+   
 }
