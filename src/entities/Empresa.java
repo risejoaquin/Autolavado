@@ -38,19 +38,6 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    /**
-     * @return the rfc
-     */
-    public String getRfc() {
-        return rfc;
-    }
-
-    /**
-     * @param rfc the rfc to set
-     */
-    public void setRfc(String rfc) {
-        this.rfc = rfc;
-    }
 
     /**
      * @return the telefono
@@ -67,7 +54,6 @@ public class Empresa {
     }
     private String nombre = new String();
     private String direccion = new String();
-    private String rfc = new String();
     private String telefono = new String();
 
 }
