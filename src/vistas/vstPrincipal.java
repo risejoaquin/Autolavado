@@ -131,10 +131,11 @@ public class vstPrincipal extends javax.swing.JFrame {
         try{
         Temporada _fecha = new Temporada();
         ActualizacionPrecios _precios = new ActualizacionPrecios();
+        
         this.txtFecha.setText(_df.format(_fecha.getFecha()));
     
             if(_fecha.getFecha().after(_fecha.getFechaFin()) && _fecha.getFecha().before(_fecha.getFechaIncio())){
-                
+
             }
             
         }catch(Exception ex){

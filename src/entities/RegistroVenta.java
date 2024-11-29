@@ -123,19 +123,7 @@ public class RegistroVenta {
     }
 
 
-    /**
-     * @return the temporada
-     */
-    public Temporada getTemporada() {
-        return temporada;
-    }
-
-    /**
-     * @param temporada the temporada to set
-     */
-    public void setTemporada(Temporada temporada) {
-        this.temporada = temporada;
-    }
+    
 
     
     private int Turno = 0;
@@ -146,6 +134,6 @@ public class RegistroVenta {
     private double totalDineroCaja = 0;
     private ActualizacionPrecios costos = new ActualizacionPrecios();
     private AltaServicios servicios = new AltaServicios();
-    private Temporada temporada = new Temporada();
+    
     
 }

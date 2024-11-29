@@ -12,19 +12,7 @@ import java.util.Date;
  */
 public class ReporteVenta {
 
-    /**
-     * @return the fecha
-     */
-    public Temporada getFecha() {
-        return fecha;
-    }
-
-    /**
-     * @param fecha the fecha to set
-     */
-    public void setFecha(Temporada fecha) {
-        this.fecha = fecha;
-    }
+ 
 
   
 
@@ -41,7 +29,7 @@ public class ReporteVenta {
     public void setRegistro(RegistroVenta registro) {
         this.registro = registro;
     }
-    private Temporada fecha = new Temporada();
+    
     private RegistroVenta registro = new RegistroVenta();
     
 }

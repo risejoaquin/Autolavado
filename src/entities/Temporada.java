@@ -14,11 +14,7 @@ import java.util.Date;
  */
 public class Temporada {
 
-    public Temporada() throws ParseException {
-        this.fechaIncio = sdf.parse("28/11");
-        this.fechaFin = sdf.parse("20/03");
-        
-    }
+   
 
     /**
      * @return the fechaIncio
@@ -63,6 +59,12 @@ public class Temporada {
     }
     
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+    
+     public Temporada() throws ParseException {
+        this.fechaIncio = sdf.parse("28/11");
+        this.fechaFin = sdf.parse("20/03");
+        
+    }
     
     private Date fecha = new Date();
     private Date fechaIncio;
