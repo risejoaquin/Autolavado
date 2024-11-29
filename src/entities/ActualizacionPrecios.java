@@ -111,12 +111,12 @@ public class ActualizacionPrecios {
    
 
    
-    private double precioLimpiezaVidrio = 0;
-    private double precioEncerado = 0;
-    private double precioPulido = 0;
-    private double precioLavadoExterior = 0;
-    private double precioLavadoInterior = 0;
-    private double precioAspirado = 0;
-    private double precioServicioCompleto = 0;
+    private double precioLimpiezaVidrio = 70;
+    private double precioEncerado = 200;
+    private double precioPulido = 250;
+    private double precioLavadoExterior = 150;
+    private double precioLavadoInterior = 170;
+    private double precioAspirado = 100;
+    private double precioServicioCompleto = 850;
 
 }

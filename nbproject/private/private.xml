@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/Temporada.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/RegistroVenta.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/AltaServicios.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/CatalogoServicio.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/ReporteVenta.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/ActualizacionPrecios.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/VentaGeneral.java</file>
-            <file>file:/C:/Users/PC%20WHITE%20WOLF/OneDrive/Documentos/NetBeansProjects/Autolavado/src/entities/Empresa.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/ActualizacionPrecios.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/RegistroVenta.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/Empresa.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/vistas/vstPrincipal.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/ReporteVenta.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/VentaGeneral.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/AltaServicios.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/CatalogoServicio.java</file>
+            <file>file:/C:/Users/compu/Documents/NetBeansProjects/LavadoAutos/src/entities/Temporada.java</file>
         </group>
     </open-files>
 </project-private>
