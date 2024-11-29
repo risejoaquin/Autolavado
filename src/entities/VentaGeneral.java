@@ -54,4 +54,9 @@ public class VentaGeneral {
     private RegistroVenta registro = new RegistroVenta();
     private ReporteVenta reporte = new ReporteVenta();
     private Empresa empresa = new Empresa();
+    
+    VentaGeneral()
+    {
+        
+    }
 }

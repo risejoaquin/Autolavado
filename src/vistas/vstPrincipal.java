@@ -52,6 +52,11 @@ public class vstPrincipal extends javax.swing.JFrame {
         jLabel2.setText("Todos los derechos reservados MANIATIC WASH R® ");
 
         btnCatalogo.setText("Catalogo");
+        btnCatalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatalogoActionPerformed(evt);
+            }
+        });
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +92,7 @@ public class vstPrincipal extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnSiguiente))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
+                        .addGap(136, 136, 136)
                         .addComponent(btnCatalogo)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
@@ -96,9 +101,9 @@ public class vstPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86)
-                .addComponent(btnCatalogo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addGap(64, 64, 64)
+                .addComponent(btnCatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,13 +140,25 @@ public class vstPrincipal extends javax.swing.JFrame {
         this.txtFecha.setText(_df.format(_fecha.getFecha()));
     
             if(_fecha.getFecha().after(_fecha.getFechaFin()) && _fecha.getFecha().before(_fecha.getFechaIncio())){
-
+                _precios.setPrecioLimpiezaVidrio(1.10* _precios.getPrecioLimpiezaVidrio());
+                _precios.setPrecioEncerado(1.10* _precios.getPrecioEncerado());
+                _precios.setPrecioPulido(1.10* _precios.getPrecioPulido());
+                _precios.setPrecioLavadoExterior(1.10* _precios.getPrecioLavadoExterior());
+                _precios.setPrecioLavadoInterior(1.10* _precios.getPrecioLavadoInterior());
+                _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
+                _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
             }
             
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, "Err", "proteger", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogoActionPerformed
+        vstCatalogo _frmCatalogo = new vstCatalogo();
+        
+        _frmCatalogo.setVisible(true);
+    }//GEN-LAST:event_btnCatalogoActionPerformed
 
     /**
      * @param args the command line arguments
