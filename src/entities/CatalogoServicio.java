@@ -21,7 +21,7 @@ public class CatalogoServicio {
      * @param limpiarVidrios the limpiarVidrios to set
      */
     public void setLimpiarVidrios(String limpiarVidrios) {
-        this.limpiarVidrios = limpiarVidrios;
+        this.limpiarVidrios = "Limpiar vidrios";
     }
 
     /**
@@ -35,7 +35,7 @@ public class CatalogoServicio {
      * @param encerado the encerado to set
      */
     public void setEncerado(String encerado) {
-        this.encerado = encerado;
+        this.encerado = "Encerado";
     }
 
     /**
@@ -49,7 +49,7 @@ public class CatalogoServicio {
      * @param pulido the pulido to set
      */
     public void setPulido(String pulido) {
-        this.pulido = pulido;
+        this.pulido = "Pulido";
     }
 
     /**
@@ -63,7 +63,7 @@ public class CatalogoServicio {
      * @param lavadoExterior the lavadoExterior to set
      */
     public void setLavadoExterior(String lavadoExterior) {
-        this.lavadoExterior = lavadoExterior;
+        this.lavadoExterior = "Lavado exterior";
     }
 
     /**
@@ -77,7 +77,7 @@ public class CatalogoServicio {
      * @param lavadoInterior the lavadoInterior to set
      */
     public void setLavadoInterior(String lavadoInterior) {
-        this.lavadoInterior = lavadoInterior;
+        this.lavadoInterior = "Lavado interior";
     }
 
     /**
@@ -91,7 +91,7 @@ public class CatalogoServicio {
      * @param aspirado the aspirado to set
      */
     public void setAspirado(String aspirado) {
-        this.aspirado = aspirado;
+        this.aspirado = "Aspirado";
     }
 
     /**
@@ -105,7 +105,7 @@ public class CatalogoServicio {
      * @param servicioCompleto the servicioCompleto to set
      */
     public void setServicioCompleto(String servicioCompleto) {
-        this.servicioCompleto = servicioCompleto;
+        this.servicioCompleto = "Servicio completo";
     }
     private String limpiarVidrios = new String();
     private String encerado = new String();
