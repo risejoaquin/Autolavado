@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class vstPrincipal extends javax.swing.JFrame {
 
-    SimpleDateFormat _df = new SimpleDateFormat("dd/MM");
+    SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     
     /**
      * Creates new form vstPrincipal
@@ -136,10 +136,11 @@ public class vstPrincipal extends javax.swing.JFrame {
         try{
         Temporada _fecha = new Temporada();
         ActualizacionPrecios _precios = new ActualizacionPrecios();
+        _fecha.setFecha(_df.parse(txtFecha.getText()));
         
-        this.txtFecha.setText(_df.format(_fecha.getFecha()));
+        
     
-            if(_fecha.getFecha().after(_fecha.getFechaFin()) && _fecha.getFecha().before(_fecha.getFechaIncio())){
+            if(_fecha.getFecha().before(_fecha.getFechaFin()) && _fecha.getFecha().after(_fecha.getFechaIncio())){
                 _precios.setPrecioLimpiezaVidrio(1.10* _precios.getPrecioLimpiezaVidrio());
                 _precios.setPrecioEncerado(1.10* _precios.getPrecioEncerado());
                 _precios.setPrecioPulido(1.10* _precios.getPrecioPulido());
@@ -147,7 +148,8 @@ public class vstPrincipal extends javax.swing.JFrame {
                 _precios.setPrecioLavadoInterior(1.10* _precios.getPrecioLavadoInterior());
                 _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
                 _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
-            }
+                JOptionPane.showMessageDialog(null, "se elevaron los precios por la temporada de frio", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            }else{ JOptionPane.showMessageDialog(null, "no se elevaran los precios por la temporada de calor", "Mensaje", JOptionPane.INFORMATION_MESSAGE);}
             
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, "Err", "proteger", JOptionPane.ERROR_MESSAGE);

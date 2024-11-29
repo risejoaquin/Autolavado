@@ -58,11 +58,11 @@ public class Temporada {
         this.fecha = fecha;
     }
     
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+    SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     
      public Temporada() throws ParseException {
-        this.fechaIncio = sdf.parse("28/11");
-        this.fechaFin = sdf.parse("20/03");
+        this.fechaIncio = _df.parse("28/11/2024");
+        this.fechaFin = _df.parse("20/03/2025");
         
     }
     
