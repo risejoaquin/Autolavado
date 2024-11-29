@@ -15,16 +15,18 @@ public class ReporteVenta {
     /**
      * @return the fecha
      */
-    public Date getFecha() {
+    public Temporada getFecha() {
         return fecha;
     }
 
     /**
      * @param fecha the fecha to set
      */
-    public void setFecha(Date fecha) {
+    public void setFecha(Temporada fecha) {
         this.fecha = fecha;
     }
+
+  
 
     /**
      * @return the registro
@@ -39,7 +41,7 @@ public class ReporteVenta {
     public void setRegistro(RegistroVenta registro) {
         this.registro = registro;
     }
-    private Date fecha = new Date();
+    private Temporada fecha = new Temporada();
     private RegistroVenta registro = new RegistroVenta();
     
 }

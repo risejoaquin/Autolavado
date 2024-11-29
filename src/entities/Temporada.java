@@ -4,6 +4,8 @@
  */
 package entities;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -12,32 +14,24 @@ import java.util.Date;
  */
 public class Temporada {
 
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
+    public Temporada() throws ParseException {
+        this.fechaIncio = sdf.parse("28/11");
+        this.fechaFin = sdf.parse("20/03");
+        
     }
 
     /**
-     * @param nombre the nombre to set
+     * @return the fechaIncio
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public Date getFechaIncio() {
+        return fechaIncio;
     }
 
     /**
-     * @return the fechaInicio
+     * @param fechaIncio the fechaIncio to set
      */
-    public Date getFechaInicio() {
-        return fechaInicio;
-    }
-
-    /**
-     * @param fechaInicio the fechaInicio to set
-     */
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFechaIncio(Date fechaIncio) {
+        this.fechaIncio = fechaIncio;
     }
 
     /**
@@ -53,7 +47,24 @@ public class Temporada {
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
     }
-    private String nombre = new String();
-    private Date fechaInicio = new Date();
-    private Date fechaFin = new Date();
+
+    /**
+     * @return the fecha
+     */
+    public Date getFecha() {
+        return fecha;
+    }
+
+    /**
+     * @param fecha the fecha to set
+     */
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+    
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+    
+    private Date fecha = new Date();
+    private Date fechaIncio;
+    private Date fechaFin;
 }
