@@ -277,11 +277,15 @@ public class vstCatalogo extends javax.swing.JFrame {
     }//GEN-LAST:event_bntLavadoInteriorActionPerformed
 
     private void bntAspiradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAspiradoActionPerformed
-        
+        reg.setSubtotal(precios.getPrecioAspirado());
+        reg.setIva(precios.getPrecioAspirado()*1.16);
+        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
     }//GEN-LAST:event_bntAspiradoActionPerformed
 
     private void bntServicioCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntServicioCompletoActionPerformed
-       
+       reg.setSubtotal(precios.getPrecioServicioCompleto());
+       reg.setIva(precios.getPrecioServicioCompleto()*1.16);
+       reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
     }//GEN-LAST:event_bntServicioCompletoActionPerformed
 
     /**
