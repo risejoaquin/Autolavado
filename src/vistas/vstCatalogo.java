@@ -5,6 +5,7 @@
 package vistas;
 
 import entities.ActualizacionPrecios;
+import entities.AltaServicios;
 import entities.Temporada;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -19,7 +20,7 @@ public class vstCatalogo extends javax.swing.JFrame {
     ActualizacionPrecios precios = new ActualizacionPrecios();
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     DecimalFormat dfm = new DecimalFormat("#.00");  
-
+    AltaServicios serv = new AltaServicios();
   
     /**
      * Creates new form vstCatalogo
@@ -107,6 +108,11 @@ public class vstCatalogo extends javax.swing.JFrame {
         labelVidrios.setText("Lavado de vidrios:");
 
         bntVidrios.setText("agregar");
+        bntVidrios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntVidriosActionPerformed(evt);
+            }
+        });
 
         bntEncerado.setText("agregar");
 
@@ -208,6 +214,10 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bntVidriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntVidriosActionPerformed
+        serv.setAspirado(ALLBITS);
+    }//GEN-LAST:event_bntVidriosActionPerformed
 
     /**
      * @param args the command line arguments
