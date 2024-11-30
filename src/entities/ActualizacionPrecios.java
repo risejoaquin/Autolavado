@@ -111,7 +111,7 @@ public class ActualizacionPrecios {
    
 
    
-    private double precioLimpiezaVidrio = 70;
+    private double precioLimpiezaVidrio = 80;
     private double precioEncerado = 200;
     private double precioPulido = 250;
     private double precioLavadoExterior = 150;

@@ -6,7 +6,10 @@ package vistas;
 
 import entities.ActualizacionPrecios;
 import entities.Temporada;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -40,6 +43,7 @@ public class vstPrincipal extends javax.swing.JFrame {
         btnGuardar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtFecha = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +70,8 @@ public class vstPrincipal extends javax.swing.JFrame {
 
         jLabel4.setText("FECHA");
 
+        jLabel3.setText("jLabel3");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -73,13 +79,15 @@ public class vstPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 205, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnGuardar)
                         .addGap(18, 18, 18)
-                        .addComponent(btnCatalogo))
-                    .addComponent(jLabel4))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(btnCatalogo))))
                 .addGap(261, 261, 261))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +111,9 @@ public class vstPrincipal extends javax.swing.JFrame {
                     .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar)
                     .addComponent(btnCatalogo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                .addGap(72, 72, 72)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
         );
@@ -125,25 +135,19 @@ public class vstPrincipal extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try{
         Temporada _fecha = new Temporada();
-        ActualizacionPrecios _precios = new ActualizacionPrecios();
-        _fecha.setFecha(_df.parse(txtFecha.getText()));
+        _fecha.setfecha1(_df.parse(txtFecha.getText()));
         
         
     
-            if(_fecha.getFecha().before(_fecha.getFechaFin()) && _fecha.getFecha().after(_fecha.getFechaIncio())){
-                _precios.setPrecioLimpiezaVidrio(1.10* _precios.getPrecioLimpiezaVidrio());
-                _precios.setPrecioEncerado(1.10* _precios.getPrecioEncerado());
-                _precios.setPrecioPulido(1.10* _precios.getPrecioPulido());
-                _precios.setPrecioLavadoExterior(1.10* _precios.getPrecioLavadoExterior());
-                _precios.setPrecioLavadoInterior(1.10* _precios.getPrecioLavadoInterior());
-                _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
-                _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
+            if(_fecha.getfecha1().before(_fecha.getFechaFin()) && _fecha.getfecha1().after(_fecha.getFechaIncio())){
                 
+                JOptionPane.showMessageDialog(null, "se elevaron los precios en un 10% por la temporada de frio", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
                 
-
-
-                JOptionPane.showMessageDialog(null, "se elevaron los precios por la temporada de frio", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
-            }else{ JOptionPane.showMessageDialog(null, "no se elevaran los precios por la temporada de calor", "Mensaje", JOptionPane.INFORMATION_MESSAGE);}
+            }else{ 
+                
+                JOptionPane.showMessageDialog(null, "no se elevaran los precios por la temporada de calor", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            
+            }
             
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, "Err", "proteger", JOptionPane.ERROR_MESSAGE);
@@ -152,10 +156,19 @@ public class vstPrincipal extends javax.swing.JFrame {
 
     private void btnCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogoActionPerformed
         vstCatalogo _frmCatalogo = new vstCatalogo();
+        Temporada _fecha;
+        try {
+            _fecha = new Temporada();
         
+        _fecha.setfecha1(_df.parse(txtFecha.getText()));
+        } catch (ParseException ex) {
+            Logger.getLogger(vstPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
         _frmCatalogo.setVisible(true);
         
         this.dispose();
+        
+        
     }//GEN-LAST:event_btnCatalogoActionPerformed
 
     /**
@@ -198,6 +211,7 @@ public class vstPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtFecha;

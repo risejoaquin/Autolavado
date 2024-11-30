@@ -5,27 +5,64 @@
 package vistas;
 
 import entities.ActualizacionPrecios;
+import entities.Temporada;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author PC WHITE WOLF
  */
 public class vstCatalogo extends javax.swing.JFrame {
+    ActualizacionPrecios precios = new ActualizacionPrecios();
+    SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     
-  public void mostrarPrecios() {
-        ActualizacionPrecios precios = new ActualizacionPrecios();
-        double precioVidrio = precios.getPrecioLimpiezaVidrio();
-
-        // Concatenamos el precio en el JLabel
-        labelVidrios.setText("Precio Lavado Vidrio: $" + precioVidrio);
-    }
+    
+  
 
     
+  
+  
     /**
      * Creates new form vstCatalogo
      */
     public vstCatalogo() {
+        
+        initComponents();
+        
+        try{
+        Temporada _fecha = new Temporada();
+        ActualizacionPrecios _precios = new ActualizacionPrecios();
+        vstPrincipal _v2 = new vstPrincipal();
+       
+        
+        
+    
+            if(_fecha.getfecha1().before(_fecha.getFechaFin()) && _fecha.getfecha1().after(_fecha.getFechaIncio())){
+                _precios.setPrecioLimpiezaVidrio(1.10* _precios.getPrecioLimpiezaVidrio());
+                _precios.setPrecioEncerado(1.10* _precios.getPrecioEncerado());
+                _precios.setPrecioPulido(1.10* _precios.getPrecioPulido());
+                _precios.setPrecioLavadoExterior(1.10* _precios.getPrecioLavadoExterior());
+                _precios.setPrecioLavadoInterior(1.10* _precios.getPrecioLavadoInterior());
+                _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
+                _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
+                
+                labelVidrios.setText(_fecha.getfecha1()+" El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
+                
+                
+            }else{ 
+                labelVidrios.setText("El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
+               
+                
+            }
+            
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, "Err", "proteger", JOptionPane.ERROR_MESSAGE);
+        }
+ 
+    
  
     }
 

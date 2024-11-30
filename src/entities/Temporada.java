@@ -47,15 +47,15 @@ public class Temporada {
     /**
      * @return the fecha
      */
-    public Date getFecha() {
-        return fecha;
+    public Date getfecha1() {
+        return fecha1;
     }
 
     /**
      * @param fecha the fecha to set
      */
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setfecha1(Date fecha) {
+        this.fecha1 = fecha;
     }
     
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
@@ -66,7 +66,7 @@ public class Temporada {
         
     }
     
-    private Date fecha = new Date();
+    private Date fecha1 = new Date();
     private Date fechaIncio;
     private Date fechaFin;
 }
