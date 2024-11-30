@@ -5,6 +5,7 @@
 package vistas;
 
 import entities.ActualizacionPrecios;
+import entities.AltaServicio;
 import entities.RegistroVenta;
 import entities.Temporada;
 import java.text.DecimalFormat;
@@ -21,6 +22,7 @@ public class vstCatalogo extends javax.swing.JFrame {
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     DecimalFormat dfm = new DecimalFormat("#.00");  
     RegistroVenta reg = new RegistroVenta();
+    AltaServicio alt = new AltaServicio(); 
   
     /**
      * Creates new form vstCatalogo
@@ -270,56 +272,63 @@ public class vstCatalogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntVidriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntVidriosActionPerformed
+        alt.setLimpiezaVidrio(1);
         reg.setSubtotal(precios.getPrecioLimpiezaVidrio());
         reg.setIva(precios.getPrecioLimpiezaVidrio()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
-        System.out.println("Limpieza Vidrio: ");
-        
+ 
         
         
     }//GEN-LAST:event_bntVidriosActionPerformed
 
     private void bntEnceradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEnceradoActionPerformed
+        alt.setEncerado(1);
         reg.setSubtotal(precios.getPrecioEncerado());
         reg.setIva(precios.getPrecioEncerado()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
-        System.out.println("Encerado : ");
+
+        
     }//GEN-LAST:event_bntEnceradoActionPerformed
 
     private void bntPulidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPulidoActionPerformed
+        alt.setPulido(1);
         reg.setSubtotal(precios.getPrecioPulido());
         reg.setIva(precios.getPrecioPulido()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
-        System.out.println("Pulido : ");
+
     }//GEN-LAST:event_bntPulidoActionPerformed
 
     private void bntLavadoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLavadoEActionPerformed
+        alt.setLavadoExterior(1);
         reg.setSubtotal(precios.getPrecioLavadoExterior());
         reg.setIva(precios.getPrecioLavadoExterior()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
-        System.out.println("Lavado Exterior : ");
+
     }//GEN-LAST:event_bntLavadoEActionPerformed
 
     private void bntLavadoInteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLavadoInteriorActionPerformed
+        alt.setLavadoInterior(1);
         reg.setSubtotal(precios.getPrecioLavadoInterior());
         reg.setIva(precios.getPrecioLavadoInterior()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
-        System.out.println("Lavado Interior: ");
+
     }//GEN-LAST:event_bntLavadoInteriorActionPerformed
 
     private void bntAspiradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAspiradoActionPerformed
+        alt.setAspirado(1);
         reg.setSubtotal(precios.getPrecioAspirado());
         reg.setIva(precios.getPrecioAspirado()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
-        System.out.println(" Aspirado: ");
+
     }//GEN-LAST:event_bntAspiradoActionPerformed
 
     private void bntServicioCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntServicioCompletoActionPerformed
+       alt.setServicioCompleto(1);
        reg.setSubtotal(precios.getPrecioServicioCompleto());
        reg.setIva(precios.getPrecioServicioCompleto()*1.16);
        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
        
-       System.out.println("Servicio completo: ");
+
     }//GEN-LAST:event_bntServicioCompletoActionPerformed
 
     private void labelTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labelTicketActionPerformed

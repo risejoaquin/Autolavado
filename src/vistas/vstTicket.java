@@ -5,35 +5,42 @@
 package vistas;
 
 
+import entities.ActualizacionPrecios;
+import entities.AltaServicio;
 import entities.RegistroVenta;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
  * @author compu
  */
 public class vstTicket extends javax.swing.JFrame {
-    RegistroVenta _rg = new RegistroVenta();
+     
+    private DefaultTableModel modelo;
+    RegistroVenta reg = new RegistroVenta();
+    AltaServicio alt = new AltaServicio();
+    ActualizacionPrecios precios = new ActualizacionPrecios();
 
     public vstTicket() {
         initComponents();
-
+        labelVidrio.setText("Lavado vidrio: "+alt.getLimpiezaVidrio()+precios.getPrecioLimpiezaVidrio());
+        labelPulido.setText("Lavado vidrio: "+alt.getPulido());
+        labelEncerado.setText("Lavado vidrio: "+alt.getEncerado());
+        labelExterior.setText("Lavado vidrio: "+alt.getLavadoExterior());
+        labelInterior.setText("Lavado vidrio: "+alt.getLavadoInterior());
+        labelAspirado.setText("Lavado vidrio: "+alt.getAspirado());
+        labelCompleto.setText("Lavado vidrio: "+alt.getServicioCompleto());
     
 
-
-
-   
-    
          
 }
-    public void llenarTabla(){
-        DefaultTableModel _modelo = (DefaultTableModel) this.tblTicket.getModel();
-        
-        _modelo.setRowCount(0);
-        
-        
-        
-    }
+  
+
+    
     
 
     /**
@@ -51,8 +58,16 @@ public class vstTicket extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblTicket = new javax.swing.JTable();
+        labelVidrio = new javax.swing.JLabel();
+        labelEncerado = new javax.swing.JLabel();
+        labelPulido = new javax.swing.JLabel();
+        labelExterior = new javax.swing.JLabel();
+        labelInterior = new javax.swing.JLabel();
+        labelAspirado = new javax.swing.JLabel();
+        labelCompleto = new javax.swing.JLabel();
+        labelTotal = new javax.swing.JLabel();
+        labelSubtotal = new javax.swing.JLabel();
+        labelIva = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,26 +81,25 @@ public class vstTicket extends javax.swing.JFrame {
 
         jLabel5.setText("Emitido en: Av Carr. a Aeropuerto de Guaymas 870-Km 3, 85500 Guaymas, Son.");
 
-        tblTicket.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "SERVICIO", "SUBTOTAL", "IVA", "TOTAL"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
+        labelVidrio.setText("lavado vidrio");
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(tblTicket);
+        labelEncerado.setText("encerado");
+
+        labelPulido.setText("pulido");
+
+        labelExterior.setText("exterior");
+
+        labelInterior.setText("interior");
+
+        labelAspirado.setText("aspirado");
+
+        labelCompleto.setText("lavado completo");
+
+        labelTotal.setText("Total");
+
+        labelSubtotal.setText("Sub total");
+
+        labelIva.setText("Iva");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -94,8 +108,30 @@ public class vstTicket extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addComponent(jLabel11))
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelAspirado)
+                            .addComponent(labelCompleto)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(labelVidrio)
+                                    .addGap(200, 200, 200)
+                                    .addComponent(labelSubtotal))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(labelEncerado)
+                                    .addGap(271, 271, 271))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel11)
+                                    .addGap(115, 115, 115))
+                                .addComponent(labelExterior, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(labelPulido)
+                                        .addComponent(labelInterior))
+                                    .addGap(222, 222, 222)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(labelTotal)
+                                        .addComponent(labelIva))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,11 +141,8 @@ public class vstTicket extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
-                                    .addComponent(jLabel4)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(53, Short.MAX_VALUE))
+                                    .addComponent(jLabel4))))))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,18 +155,36 @@ public class vstTicket extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addGap(26, 26, 26)
+                .addGap(114, 114, 114)
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelVidrio)
+                    .addComponent(labelSubtotal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelEncerado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPulido)
+                    .addComponent(labelIva))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelExterior)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelInterior)
+                    .addComponent(labelTotal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelAspirado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelCompleto)
+                .addContainerGap(347, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +237,15 @@ public class vstTicket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblTicket;
+    private javax.swing.JLabel labelAspirado;
+    private javax.swing.JLabel labelCompleto;
+    private javax.swing.JLabel labelEncerado;
+    private javax.swing.JLabel labelExterior;
+    private javax.swing.JLabel labelInterior;
+    private javax.swing.JLabel labelIva;
+    private javax.swing.JLabel labelPulido;
+    private javax.swing.JLabel labelSubtotal;
+    private javax.swing.JLabel labelTotal;
+    private javax.swing.JLabel labelVidrio;
     // End of variables declaration//GEN-END:variables
 }
