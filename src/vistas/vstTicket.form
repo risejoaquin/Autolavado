@@ -50,33 +50,21 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="labelAspirado" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelCompleto" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelVidrio" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="labelSubtotal" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="labelEncerado" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="labelExterior" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="labelPulido" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelInterior" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="labelTotal" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelIva" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                              <Component id="labelEncerado" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelExterior" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelVidrio" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="labelSubtotal" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="labelIva" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="labelTotal" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="labelInterior" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelPulido" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -111,26 +99,24 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="labelVidrio" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelSubtotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelSubtotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelIva" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="labelVidrio" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="labelEncerado" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="labelPulido" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelIva" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="labelPulido" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="labelExterior" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="labelInterior" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelTotal" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="labelInterior" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="labelAspirado" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>

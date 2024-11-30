@@ -8,6 +8,7 @@ package vistas;
 import entities.ActualizacionPrecios;
 import entities.AltaServicio;
 import entities.RegistroVenta;
+import java.text.DecimalFormat;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
@@ -21,22 +22,24 @@ import javax.swing.table.DefaultTableModel;
 public class vstTicket extends javax.swing.JFrame {
      
     private DefaultTableModel modelo;
+    DecimalFormat dfm = new DecimalFormat("#.00");
     RegistroVenta reg = new RegistroVenta();
     AltaServicio alt = new AltaServicio();
     ActualizacionPrecios precios = new ActualizacionPrecios();
 
     public vstTicket() {
         initComponents();
-        labelVidrio.setText("Lavado vidrio: "+alt.getLimpiezaVidrio()+precios.getPrecioLimpiezaVidrio());
-        labelPulido.setText("Lavado vidrio: "+alt.getPulido());
-        labelEncerado.setText("Lavado vidrio: "+alt.getEncerado());
-        labelExterior.setText("Lavado vidrio: "+alt.getLavadoExterior());
-        labelInterior.setText("Lavado vidrio: "+alt.getLavadoInterior());
-        labelAspirado.setText("Lavado vidrio: "+alt.getAspirado());
-        labelCompleto.setText("Lavado vidrio: "+alt.getServicioCompleto());
+        labelVidrio.setText("Lavado vidrio: "+alt.getLimpiezaVidrio()+" y el precio es: "+dfm.format(precios.getPrecioLimpiezaVidrio()));
+        labelPulido.setText("Lavado vidrio: "+alt.getPulido()+"y el precio es: "+dfm.format(precios.getPrecioPulido()));
+        labelEncerado.setText("Lavado vidrio: "+alt.getEncerado()+" y el precio es: "+dfm.format(precios.getPrecioEncerado()));
+        labelExterior.setText("Lavado vidrio: "+alt.getLavadoExterior()+" y el precio es: "+dfm.format(precios.getPrecioLavadoExterior()));
+        labelInterior.setText("Lavado vidrio: "+alt.getLavadoInterior()+" y el precio es: "+dfm.format(precios.getPrecioLavadoInterior()));
+        labelAspirado.setText("Lavado vidrio: "+alt.getAspirado()+" y el precio es"+dfm.format(precios.getPrecioAspirado()));
+        labelCompleto.setText("Lavado vidrio: "+alt.getServicioCompleto()+" y el precio es: "+dfm.format(precios.getPrecioServicioCompleto()));
     
-
-         
+        labelSubtotal.setText("subtotal es: $"+reg.getSubtotal());
+        labelIva.setText("El IVA es: $"+reg.getIva());
+        labelTotal.setText("El total es de: $"+reg.getTotal());
 }
   
 
@@ -112,26 +115,20 @@ public class vstTicket extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelAspirado)
                             .addComponent(labelCompleto)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(labelVidrio)
-                                    .addGap(200, 200, 200)
-                                    .addComponent(labelSubtotal))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(labelEncerado)
-                                    .addGap(271, 271, 271))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel11)
-                                    .addGap(115, 115, 115))
-                                .addComponent(labelExterior, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelPulido)
-                                        .addComponent(labelInterior))
-                                    .addGap(222, 222, 222)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelTotal)
-                                        .addComponent(labelIva))))))
+                            .addComponent(labelEncerado)
+                            .addComponent(labelExterior)
+                            .addComponent(labelVidrio)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(130, 130, 130)
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(labelSubtotal)
+                                .addGap(42, 42, 42)
+                                .addComponent(labelIva)
+                                .addGap(37, 37, 37)
+                                .addComponent(labelTotal))
+                            .addComponent(labelInterior)
+                            .addComponent(labelPulido)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,23 +153,22 @@ public class vstTicket extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addGap(114, 114, 114)
-                .addComponent(jLabel11)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelVidrio)
-                    .addComponent(labelSubtotal))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelSubtotal)
+                        .addComponent(labelIva)
+                        .addComponent(labelTotal)))
+                .addGap(10, 10, 10)
+                .addComponent(labelVidrio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelEncerado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPulido)
-                    .addComponent(labelIva))
+                .addComponent(labelPulido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelExterior)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelInterior)
-                    .addComponent(labelTotal))
+                .addComponent(labelInterior)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelAspirado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
