@@ -18,7 +18,8 @@ import javax.swing.JOptionPane;
 public class vstCatalogo extends javax.swing.JFrame {
     ActualizacionPrecios precios = new ActualizacionPrecios();
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
-    
+    DecimalFormat dfm = new DecimalFormat("#.00");  
+
   
     /**
      * Creates new form vstCatalogo
@@ -44,17 +45,22 @@ public class vstCatalogo extends javax.swing.JFrame {
                 _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
                 _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
                 
-                labelVidrios.setText(" El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
-                labelVidrios.setText("Lavado vidrios: $"+_precios.getPrecioLimpiezaVidrio());
-                labelEncerado.setText("Encerado: $"+_precios.getPrecioEncerado());
-                labelLavadoExterior.setText("Lavado Exterior: $"+_precios.getPrecioLavadoExterior());
-                labelLavadoInterior.setText("Lavado Interior: $"+_precios.getPrecioLavadoInterior());
-                labelAspirado.setText("Aspirado: $"+_precios.getPrecioAspirado());
-                labelServicioCompleto.setText("Servicio Completo: $"+_precios.getPrecioServicioCompleto()); 
+                labelVidrios.setText(" El precio del lavado de vidrio es de: $"+dfm.format(_precios.getPrecioLimpiezaVidrio()));
+                labelEncerado.setText("Encerado: $"+dfm.format(_precios.getPrecioEncerado()));
+                labelPulido.setText("Pulido: $"+dfm.format(_precios.getPrecioPulido()));
+                labelLavadoExterior.setText("Lavado Exterior: $"+dfm.format(_precios.getPrecioLavadoExterior()));
+                labelLavadoInterior.setText("Lavado Interior: $"+dfm.format(_precios.getPrecioLavadoInterior()));
+                labelAspirado.setText("Aspirado: $"+dfm.format(_precios.getPrecioAspirado()));
+                labelServicioCompleto.setText("Servicio Completo: $"+dfm.format(_precios.getPrecioServicioCompleto())); 
                 
-            }else{ 
-                labelVidrios.setText("El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
-               
+            }else{
+                labelVidrios.setText(" El precio del lavado de vidrio es de: $"+dfm.format(_precios.getPrecioLimpiezaVidrio()));
+                labelEncerado.setText("Encerado: $"+dfm.format(_precios.getPrecioEncerado()));
+                labelPulido.setText("Pulido: $"+dfm.format(_precios.getPrecioPulido()));
+                labelLavadoExterior.setText("Lavado Exterior: $"+dfm.format(_precios.getPrecioLavadoExterior()));
+                labelLavadoInterior.setText("Lavado Interior: $"+dfm.format(_precios.getPrecioLavadoInterior()));
+                labelAspirado.setText("Aspirado: $"+dfm.format(_precios.getPrecioAspirado()));
+                labelServicioCompleto.setText("Servicio Completo: $"+dfm.format(_precios.getPrecioServicioCompleto())); 
                 
             }
             
@@ -86,7 +92,7 @@ public class vstCatalogo extends javax.swing.JFrame {
         bntAspirado = new javax.swing.JButton();
         bntServicioCompleto = new javax.swing.JButton();
         labelEncerado = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        labelPulido = new javax.swing.JLabel();
         labelLavadoExterior = new javax.swing.JLabel();
         labelLavadoInterior = new javax.swing.JLabel();
         labelAspirado = new javax.swing.JLabel();
@@ -116,7 +122,7 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         labelEncerado.setText("Encerado:");
 
-        jLabel4.setText("Pulido");
+        labelPulido.setText("Pulido");
 
         labelLavadoExterior.setText("Lavado Exterior");
 
@@ -135,7 +141,7 @@ public class vstCatalogo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelVidrios)
                     .addComponent(labelEncerado)
-                    .addComponent(jLabel4)
+                    .addComponent(labelPulido)
                     .addComponent(labelLavadoExterior)
                     .addComponent(labelLavadoInterior)
                     .addComponent(labelAspirado)
@@ -169,7 +175,7 @@ public class vstCatalogo extends javax.swing.JFrame {
                             .addComponent(labelEncerado))
                         .addGap(45, 45, 45)
                         .addComponent(bntPulido))
-                    .addComponent(jLabel4))
+                    .addComponent(labelPulido))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntLavadoE)
@@ -247,12 +253,12 @@ public class vstCatalogo extends javax.swing.JFrame {
     private javax.swing.JButton bntServicioCompleto;
     private javax.swing.JButton bntVidrios;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelAspirado;
     private javax.swing.JLabel labelEncerado;
     private javax.swing.JLabel labelLavadoExterior;
     private javax.swing.JLabel labelLavadoInterior;
+    private javax.swing.JLabel labelPulido;
     private javax.swing.JLabel labelServicioCompleto;
     private javax.swing.JLabel labelVidrios;
     // End of variables declaration//GEN-END:variables
