@@ -45,7 +45,12 @@ public class vstCatalogo extends javax.swing.JFrame {
                 _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
                 
                 labelVidrios.setText(" El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
-                
+                labelVidrios.setText("Lavado vidrios: $"+_precios.getPrecioLimpiezaVidrio());
+                labelEncerado.setText("Encerado: $"+_precios.getPrecioEncerado());
+                labelLavadoExterior.setText("Lavado Exterior: $"+_precios.getPrecioLavadoExterior());
+                labelLavadoInterior.setText("Lavado Interior: $"+_precios.getPrecioLavadoInterior());
+                labelAspirado.setText("Aspirado: $"+_precios.getPrecioAspirado());
+                labelServicioCompleto.setText("Servicio Completo: $"+_precios.getPrecioServicioCompleto()); 
                 
             }else{ 
                 labelVidrios.setText("El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
@@ -82,10 +87,10 @@ public class vstCatalogo extends javax.swing.JFrame {
         bntServicioCompleto = new javax.swing.JButton();
         labelEncerado = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        labelLavadoExterior = new javax.swing.JLabel();
+        labelLavadoInterior = new javax.swing.JLabel();
+        labelAspirado = new javax.swing.JLabel();
+        labelServicioCompleto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,13 +118,13 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         jLabel4.setText("Pulido");
 
-        jLabel5.setText("Lavado Exterior");
+        labelLavadoExterior.setText("Lavado Exterior");
 
-        jLabel6.setText("Lavado interior");
+        labelLavadoInterior.setText("Lavado interior");
 
-        jLabel7.setText("Aspirado");
+        labelAspirado.setText("Aspirado");
 
-        jLabel8.setText("Servicio completo:");
+        labelServicioCompleto.setText("Servicio completo:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -131,10 +136,10 @@ public class vstCatalogo extends javax.swing.JFrame {
                     .addComponent(labelVidrios)
                     .addComponent(labelEncerado)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(labelLavadoExterior)
+                    .addComponent(labelLavadoInterior)
+                    .addComponent(labelAspirado)
+                    .addComponent(labelServicioCompleto))
                 .addGap(68, 68, 68)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bntServicioCompleto)
@@ -168,19 +173,19 @@ public class vstCatalogo extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntLavadoE)
-                    .addComponent(jLabel5))
+                    .addComponent(labelLavadoExterior))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntLavadoInterior)
-                    .addComponent(jLabel6))
+                    .addComponent(labelLavadoInterior))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntAspirado)
-                    .addComponent(jLabel7))
+                    .addComponent(labelAspirado))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntServicioCompleto)
-                    .addComponent(jLabel8))
+                    .addComponent(labelServicioCompleto))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
@@ -243,12 +248,12 @@ public class vstCatalogo extends javax.swing.JFrame {
     private javax.swing.JButton bntVidrios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelAspirado;
     private javax.swing.JLabel labelEncerado;
+    private javax.swing.JLabel labelLavadoExterior;
+    private javax.swing.JLabel labelLavadoInterior;
+    private javax.swing.JLabel labelServicioCompleto;
     private javax.swing.JLabel labelVidrios;
     // End of variables declaration//GEN-END:variables
 }
