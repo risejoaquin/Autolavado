@@ -155,21 +155,33 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="agregar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntLavadoEActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bntLavadoInterior">
           <Properties>
             <Property name="text" type="java.lang.String" value="agregar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntLavadoInteriorActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bntAspirado">
           <Properties>
             <Property name="text" type="java.lang.String" value="agregar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntAspiradoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bntServicioCompleto">
           <Properties>
             <Property name="text" type="java.lang.String" value="agregar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntServicioCompletoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="labelEncerado">
           <Properties>

@@ -129,12 +129,32 @@ public class vstCatalogo extends javax.swing.JFrame {
         });
 
         bntLavadoE.setText("agregar");
+        bntLavadoE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntLavadoEActionPerformed(evt);
+            }
+        });
 
         bntLavadoInterior.setText("agregar");
+        bntLavadoInterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntLavadoInteriorActionPerformed(evt);
+            }
+        });
 
         bntAspirado.setText("agregar");
+        bntAspirado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntAspiradoActionPerformed(evt);
+            }
+        });
 
         bntServicioCompleto.setText("agregar");
+        bntServicioCompleto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntServicioCompletoActionPerformed(evt);
+            }
+        });
 
         labelEncerado.setText("Encerado:");
 
@@ -243,6 +263,26 @@ public class vstCatalogo extends javax.swing.JFrame {
         reg.setIva(precios.getPrecioPulido()*1.16);
         reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
     }//GEN-LAST:event_bntPulidoActionPerformed
+
+    private void bntLavadoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLavadoEActionPerformed
+        reg.setSubtotal(precios.getPrecioLavadoExterior());
+        reg.setIva(precios.getPrecioLavadoExterior()*1.16);
+        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+    }//GEN-LAST:event_bntLavadoEActionPerformed
+
+    private void bntLavadoInteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLavadoInteriorActionPerformed
+        reg.setSubtotal(precios.getPrecioLavadoInterior());
+        reg.setIva(precios.getPrecioLavadoInterior()*1.16);
+        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+    }//GEN-LAST:event_bntLavadoInteriorActionPerformed
+
+    private void bntAspiradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAspiradoActionPerformed
+        
+    }//GEN-LAST:event_bntAspiradoActionPerformed
+
+    private void bntServicioCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntServicioCompletoActionPerformed
+       
+    }//GEN-LAST:event_bntServicioCompletoActionPerformed
 
     /**
      * @param args the command line arguments

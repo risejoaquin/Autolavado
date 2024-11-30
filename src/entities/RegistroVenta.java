@@ -68,30 +68,11 @@ public class RegistroVenta {
         this.costos = costos;
     }
 
-    /**
-     * @return the servicios
-     */
-    public AltaServicios getServicios() {
-        return servicios;
-    }
-
-    /**
-     * @param servicios the servicios to set
-     */
-    public void setServicios(AltaServicios servicios) {
-        this.servicios = servicios;
-    }
-
-
-    
-
-    
-
     private double iva = 0;
     private double total = 0;
     private double subtotal = 0;
     private ActualizacionPrecios costos = new ActualizacionPrecios();
-    private AltaServicios servicios = new AltaServicios();
+
     
     
 }
