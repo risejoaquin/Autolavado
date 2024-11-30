@@ -5,7 +5,6 @@
 package vistas;
 
 import entities.ActualizacionPrecios;
-import entities.AltaServicios;
 import entities.RegistroVenta;
 import entities.Temporada;
 import java.text.DecimalFormat;
@@ -21,7 +20,6 @@ public class vstCatalogo extends javax.swing.JFrame {
     ActualizacionPrecios precios = new ActualizacionPrecios();
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     DecimalFormat dfm = new DecimalFormat("#.00");  
-    AltaServicios serv = new AltaServicios();
     RegistroVenta reg = new RegistroVenta();
   
     /**
@@ -124,6 +122,11 @@ public class vstCatalogo extends javax.swing.JFrame {
         });
 
         bntPulido.setText("agregar");
+        bntPulido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntPulidoActionPerformed(evt);
+            }
+        });
 
         bntLavadoE.setText("agregar");
 
@@ -223,14 +226,23 @@ public class vstCatalogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntVidriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntVidriosActionPerformed
-        reg.setTotal((serv.getLimpiezaVidrios()*precios.getPrecioLimpiezaVidrio())*1.16);
-        reg.setSubtotal((serv.getLimpiezaVidrios()*precios.getPrecioLimpiezaVidrio()));
-        reg.setIva(serv.getLimpiezaVidrios()*1.16);
+        reg.setSubtotal(precios.getPrecioLimpiezaVidrio());
+        reg.setIva(precios.getPrecioLimpiezaVidrio()*1.16);
+        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        
     }//GEN-LAST:event_bntVidriosActionPerformed
 
     private void bntEnceradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEnceradoActionPerformed
-        // TODO add your handling code here:
+        reg.setSubtotal(precios.getPrecioEncerado());
+        reg.setIva(precios.getPrecioEncerado()*1.16);
+        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
     }//GEN-LAST:event_bntEnceradoActionPerformed
+
+    private void bntPulidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPulidoActionPerformed
+        reg.setSubtotal(precios.getPrecioPulido());
+        reg.setIva(precios.getPrecioPulido()*1.16);
+        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+    }//GEN-LAST:event_bntPulidoActionPerformed
 
     /**
      * @param args the command line arguments
