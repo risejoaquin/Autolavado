@@ -55,7 +55,7 @@ public class Temporada {
      * @param fecha the fecha to set
      */
     public void setfecha1(Date fecha) {
-        this.fecha1 = fecha;
+        Temporada.fecha1 = fecha;
     }
     
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");

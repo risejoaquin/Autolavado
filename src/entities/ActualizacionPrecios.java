@@ -21,7 +21,7 @@ public class ActualizacionPrecios {
      * @param precioLimpiezaVidrio the precioLimpiezaVidrio to set
      */
     public void setPrecioLimpiezaVidrio(double precioLimpiezaVidrio) {
-        this.precioLimpiezaVidrio = precioLimpiezaVidrio;
+        ActualizacionPrecios.precioLimpiezaVidrio = precioLimpiezaVidrio;
     }
 
     /**
@@ -35,7 +35,7 @@ public class ActualizacionPrecios {
      * @param precioEncerado the precioEncerado to set
      */
     public void setPrecioEncerado(double precioEncerado) {
-        this.precioEncerado = precioEncerado;
+        ActualizacionPrecios.precioEncerado = precioEncerado;
     }
 
     /**
@@ -49,7 +49,7 @@ public class ActualizacionPrecios {
      * @param precioPulido the precioPulido to set
      */
     public void setPrecioPulido(double precioPulido) {
-        this.precioPulido = precioPulido;
+        ActualizacionPrecios.precioPulido = precioPulido;
     }
 
     /**
@@ -63,7 +63,7 @@ public class ActualizacionPrecios {
      * @param precioLavadoExterior the precioLavadoExterior to set
      */
     public void setPrecioLavadoExterior(double precioLavadoExterior) {
-        this.precioLavadoExterior = precioLavadoExterior;
+        ActualizacionPrecios.precioLavadoExterior = precioLavadoExterior;
     }
 
     /**
@@ -77,7 +77,7 @@ public class ActualizacionPrecios {
      * @param precioLavadoInterior the precioLavadoInterior to set
      */
     public void setPrecioLavadoInterior(double precioLavadoInterior) {
-        this.precioLavadoInterior = precioLavadoInterior;
+        ActualizacionPrecios.precioLavadoInterior = precioLavadoInterior;
     }
 
     /**
@@ -91,7 +91,7 @@ public class ActualizacionPrecios {
      * @param precioAspirado the precioAspirado to set
      */
     public void setPrecioAspirado(double precioAspirado) {
-        this.precioAspirado = precioAspirado;
+        ActualizacionPrecios.precioAspirado = precioAspirado;
     }
 
     /**
@@ -105,18 +105,18 @@ public class ActualizacionPrecios {
      * @param precioServicioCompleto the precioServicioCompleto to set
      */
     public void setPrecioServicioCompleto(double precioServicioCompleto) {
-        this.precioServicioCompleto = precioServicioCompleto;
+        ActualizacionPrecios.precioServicioCompleto = precioServicioCompleto;
     }
 
    
 
    
-    private double precioLimpiezaVidrio = 80;
-    private double precioEncerado = 200;
-    private double precioPulido = 250;
-    private double precioLavadoExterior = 150;
-    private double precioLavadoInterior = 170;
-    private double precioAspirado = 100;
-    private double precioServicioCompleto = 850;
+    private static double precioLimpiezaVidrio = 80;
+    private static double precioEncerado = 200;
+    private static double precioPulido = 250;
+    private static double precioLavadoExterior = 150;
+    private static double precioLavadoInterior = 170;
+    private static double precioAspirado = 100;
+    private static double precioServicioCompleto = 850;
 
 }
