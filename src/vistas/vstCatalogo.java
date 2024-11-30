@@ -4,17 +4,29 @@
  */
 package vistas;
 
+import entities.ActualizacionPrecios;
+import javax.swing.JLabel;
+
 /**
  *
  * @author PC WHITE WOLF
  */
 public class vstCatalogo extends javax.swing.JFrame {
+    
+  public void mostrarPrecios() {
+        ActualizacionPrecios precios = new ActualizacionPrecios();
+        double precioVidrio = precios.getPrecioLimpiezaVidrio();
 
+        // Concatenamos el precio en el JLabel
+        labelVidrios.setText("Precio Lavado Vidrio: $" + precioVidrio);
+    }
+
+    
     /**
      * Creates new form vstCatalogo
      */
     public vstCatalogo() {
-        initComponents();
+ 
     }
 
     /**
@@ -28,7 +40,7 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        labelVidrios = new javax.swing.JLabel();
         bntVidrios = new javax.swing.JButton();
         bntEncerado = new javax.swing.JButton();
         bntPulido = new javax.swing.JButton();
@@ -36,7 +48,7 @@ public class vstCatalogo extends javax.swing.JFrame {
         bntLavadoInterior = new javax.swing.JButton();
         bntAspirado = new javax.swing.JButton();
         bntServicioCompleto = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        labelEncerado = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -49,7 +61,7 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         jLabel1.setText("Bienvenido estos son los servicios que ofrece Maniatic Wash");
 
-        jLabel2.setText("Lavado de vidrios:");
+        labelVidrios.setText("Lavado de vidrios:");
 
         bntVidrios.setText("agregar");
 
@@ -65,7 +77,7 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         bntServicioCompleto.setText("agregar");
 
-        jLabel3.setText("Encerado:");
+        labelEncerado.setText("Encerado:");
 
         jLabel4.setText("Pulido");
 
@@ -84,8 +96,8 @@ public class vstCatalogo extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
+                    .addComponent(labelVidrios)
+                    .addComponent(labelEncerado)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6)
@@ -112,12 +124,12 @@ public class vstCatalogo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
+                            .addComponent(labelVidrios)
                             .addComponent(bntVidrios))
                         .addGap(56, 56, 56)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(bntEncerado)
-                            .addComponent(jLabel3))
+                            .addComponent(labelEncerado))
                         .addGap(45, 45, 45)
                         .addComponent(bntPulido))
                     .addComponent(jLabel4))
@@ -198,13 +210,13 @@ public class vstCatalogo extends javax.swing.JFrame {
     private javax.swing.JButton bntServicioCompleto;
     private javax.swing.JButton bntVidrios;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelEncerado;
+    private javax.swing.JLabel labelVidrios;
     // End of variables declaration//GEN-END:variables
 }

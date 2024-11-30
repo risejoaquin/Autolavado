@@ -138,6 +138,10 @@ public class vstPrincipal extends javax.swing.JFrame {
                 _precios.setPrecioLavadoInterior(1.10* _precios.getPrecioLavadoInterior());
                 _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
                 _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
+                
+                
+
+
                 JOptionPane.showMessageDialog(null, "se elevaron los precios por la temporada de frio", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
             }else{ JOptionPane.showMessageDialog(null, "no se elevaran los precios por la temporada de calor", "Mensaje", JOptionPane.INFORMATION_MESSAGE);}
             
