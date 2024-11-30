@@ -118,5 +118,6 @@ public class ActualizacionPrecios {
     private static double precioLavadoInterior = 170;
     private static double precioAspirado = 100;
     private static double precioServicioCompleto = 850;
+    
 
 }
