@@ -37,9 +37,9 @@ public class vstTicket extends javax.swing.JFrame {
         labelAspirado.setText("Lavado vidrio: "+alt.getAspirado()+" y el precio es"+dfm.format(precios.getPrecioAspirado()));
         labelCompleto.setText("Lavado vidrio: "+alt.getServicioCompleto()+" y el precio es: "+dfm.format(precios.getPrecioServicioCompleto()));
     
-        labelSubtotal.setText("subtotal es: $"+reg.getSubtotal());
-        labelIva.setText("El IVA es: $"+reg.getIva());
-        labelTotal.setText("El total es de: $"+reg.getTotal());
+        labelSubtotal.setText("subtotal es: $"+dfm.format(reg.getSubtotal()));
+        labelIva.setText("El IVA es: $"+dfm.format(reg.getIva()));
+        labelTotal.setText("El total es de: $"+dfm.format(reg.getTotal()));
 }
   
 

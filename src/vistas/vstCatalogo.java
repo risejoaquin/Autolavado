@@ -102,11 +102,13 @@ public class vstCatalogo extends javax.swing.JFrame {
         labelServicioCompleto = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         labelTicket = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Bienvenido estos son los servicios que ofrece Maniatic Wash");
 
         labelVidrios.setText("Lavado de vidrios:");
@@ -172,6 +174,7 @@ public class vstCatalogo extends javax.swing.JFrame {
 
         labelServicioCompleto.setText("Servicio completo:");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Gracias por usar nuestro servicio y apoyarnos, ahora puede generar su ticker");
 
         labelTicket.setText("Generar ticket");
@@ -180,6 +183,9 @@ public class vstCatalogo extends javax.swing.JFrame {
                 labelTicketActionPerformed(evt);
             }
         });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setText("SOLO AGREGAR UNA VEZ CADA SERVICIO");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -197,35 +203,45 @@ public class vstCatalogo extends javax.swing.JFrame {
                     .addComponent(labelServicioCompleto))
                 .addGap(68, 68, 68)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bntServicioCompleto)
-                    .addComponent(bntAspirado)
-                    .addComponent(bntLavadoInterior)
-                    .addComponent(bntLavadoE)
-                    .addComponent(bntPulido)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bntVidrios)
-                            .addComponent(bntEncerado))
-                        .addGap(207, 207, 207)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelTicket)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(227, Short.MAX_VALUE))
+                            .addComponent(bntServicioCompleto)
+                            .addComponent(bntAspirado)
+                            .addComponent(bntLavadoE)
+                            .addComponent(bntPulido)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(bntVidrios)
+                                    .addComponent(bntEncerado))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(126, 126, 126)
+                                        .addComponent(labelTicket))
+                                    .addComponent(jLabel3)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(23, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bntLavadoInterior)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
+                        .addGap(72, 72, 72)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelTicket))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(labelTicket)
+                        .addGap(0, 34, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -238,15 +254,21 @@ public class vstCatalogo extends javax.swing.JFrame {
                                 .addGap(45, 45, 45)
                                 .addComponent(bntPulido))
                             .addComponent(labelPulido, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(39, 39, 39)
+                .addGap(101, 101, 101)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntLavadoE)
                     .addComponent(labelLavadoExterior))
-                .addGap(56, 56, 56)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bntLavadoInterior)
-                    .addComponent(labelLavadoInterior))
-                .addGap(56, 56, 56)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bntLavadoInterior)
+                            .addComponent(labelLavadoInterior))
+                        .addGap(56, 56, 56))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addGap(75, 75, 75)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntAspirado)
                     .addComponent(labelAspirado))
@@ -254,7 +276,7 @@ public class vstCatalogo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntServicioCompleto)
                     .addComponent(labelServicioCompleto))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -272,68 +294,68 @@ public class vstCatalogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntVidriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntVidriosActionPerformed
-        alt.setLimpiezaVidrio(1);
-        reg.setSubtotal(precios.getPrecioLimpiezaVidrio());
-        reg.setIva(precios.getPrecioLimpiezaVidrio()*1.16);
-        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        alt.setLimpiezaVidrio(alt.getLimpiezaVidrio()+1);
+        reg.setSubtotal(reg.getSubtotal()+precios.getPrecioLimpiezaVidrio());
+        reg.setIva(reg.getIva()+(reg.getSubtotal()*0.16));
+        
  
         
         
     }//GEN-LAST:event_bntVidriosActionPerformed
 
     private void bntEnceradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEnceradoActionPerformed
-        alt.setEncerado(1);
-        reg.setSubtotal(precios.getPrecioEncerado());
-        reg.setIva(precios.getPrecioEncerado()*1.16);
-        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        alt.setEncerado(alt.getEncerado()+1);
+        reg.setSubtotal(reg.getSubtotal()+precios.getPrecioEncerado());
+        reg.setIva(reg.getIva()+(precios.getPrecioEncerado()*0.16));
+       
 
         
     }//GEN-LAST:event_bntEnceradoActionPerformed
 
     private void bntPulidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPulidoActionPerformed
-        alt.setPulido(1);
-        reg.setSubtotal(precios.getPrecioPulido());
-        reg.setIva(precios.getPrecioPulido()*1.16);
-        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        alt.setPulido(alt.getPulido()+1);
+        reg.setSubtotal(reg.getSubtotal()+precios.getPrecioPulido());
+        reg.setIva(reg.getIva()+(precios.getPrecioPulido()*0.16));
+       
 
     }//GEN-LAST:event_bntPulidoActionPerformed
 
     private void bntLavadoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLavadoEActionPerformed
-        alt.setLavadoExterior(1);
-        reg.setSubtotal(precios.getPrecioLavadoExterior());
-        reg.setIva(precios.getPrecioLavadoExterior()*1.16);
-        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        alt.setLavadoExterior(alt.getLavadoExterior()+1);
+        reg.setSubtotal(reg.getSubtotal()+precios.getPrecioLavadoExterior());
+        reg.setIva(reg.getIva()+(precios.getPrecioLavadoExterior()*0.16));
+        
 
     }//GEN-LAST:event_bntLavadoEActionPerformed
 
     private void bntLavadoInteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLavadoInteriorActionPerformed
-        alt.setLavadoInterior(1);
-        reg.setSubtotal(precios.getPrecioLavadoInterior());
-        reg.setIva(precios.getPrecioLavadoInterior()*1.16);
-        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        alt.setLavadoInterior(alt.getLavadoInterior()+1);
+        reg.setSubtotal(reg.getSubtotal()+precios.getPrecioLavadoInterior());
+        reg.setIva(reg.getIva()+(precios.getPrecioLavadoInterior()*0.16));
+      
 
     }//GEN-LAST:event_bntLavadoInteriorActionPerformed
 
     private void bntAspiradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAspiradoActionPerformed
-        alt.setAspirado(1);
-        reg.setSubtotal(precios.getPrecioAspirado());
-        reg.setIva(precios.getPrecioAspirado()*1.16);
-        reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+        alt.setAspirado(alt.getAspirado()+1);
+        reg.setSubtotal(reg.getSubtotal()+precios.getPrecioAspirado());
+        reg.setIva(reg.getIva()+(precios.getPrecioAspirado()*0.16));
+        
 
     }//GEN-LAST:event_bntAspiradoActionPerformed
 
     private void bntServicioCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntServicioCompletoActionPerformed
-       alt.setServicioCompleto(1);
-       reg.setSubtotal(precios.getPrecioServicioCompleto());
-       reg.setIva(precios.getPrecioServicioCompleto()*1.16);
-       reg.setTotal(reg.getTotal()+reg.getSubtotal()+reg.getIva());
+       alt.setServicioCompleto(alt.getServicioCompleto()+1);
+       reg.setSubtotal(reg.getSubtotal()+precios.getPrecioServicioCompleto());
+       reg.setIva(reg.getIva()+(precios.getPrecioServicioCompleto()*0.16));
+       
        
 
     }//GEN-LAST:event_bntServicioCompletoActionPerformed
 
     private void labelTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labelTicketActionPerformed
+    reg.setTotal(reg.getSubtotal()+reg.getIva());
     vstTicket _frmTicket = new vstTicket();
-   
     _frmTicket.setVisible(true);
     
     
@@ -385,6 +407,7 @@ public class vstCatalogo extends javax.swing.JFrame {
     private javax.swing.JButton bntVidrios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelAspirado;
     private javax.swing.JLabel labelEncerado;

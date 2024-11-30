@@ -22,7 +22,7 @@ public class RegistroVenta {
      * @param iva the iva to set
      */
     public void setIva(double iva) {
-        this.iva = iva;
+        RegistroVenta.iva = iva;
     }
 
     /**
@@ -36,7 +36,7 @@ public class RegistroVenta {
      * @param total the total to set
      */
     public void setTotal(double total) {
-        this.total = total;
+        RegistroVenta.total = total;
     }
 
     /**
@@ -50,7 +50,7 @@ public class RegistroVenta {
      * @param subtotal the subtotal to set
      */
     public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
+        RegistroVenta.subtotal = subtotal;
     }
 
    
@@ -68,9 +68,9 @@ public class RegistroVenta {
         this.costos = costos;
     }
 
-    private double iva = 0;
-    private double total = 0;
-    private double subtotal = 0;
+    private static double iva = 0;
+    private static double total = 0;
+    private static double subtotal = 0;
     private ActualizacionPrecios costos = new ActualizacionPrecios();
 
     
