@@ -19,11 +19,6 @@ public class vstCatalogo extends javax.swing.JFrame {
     ActualizacionPrecios precios = new ActualizacionPrecios();
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     
-    
-  
-
-    
-  
   
     /**
      * Creates new form vstCatalogo
@@ -49,7 +44,7 @@ public class vstCatalogo extends javax.swing.JFrame {
                 _precios.setPrecioAspirado(1.10* _precios.getPrecioAspirado());
                 _precios.setPrecioServicioCompleto(1.10* _precios.getPrecioServicioCompleto());
                 
-                labelVidrios.setText(_fecha.getfecha1()+" El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
+                labelVidrios.setText(" El precio del lavado de vidrio es de: $"+_precios.getPrecioLimpiezaVidrio());
                 
                 
             }else{ 

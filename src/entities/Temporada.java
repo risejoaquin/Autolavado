@@ -66,7 +66,7 @@ public class Temporada {
         
     }
     
-    private Date fecha1 = new Date();
+    private static Date fecha1 = new Date();
     private Date fechaIncio;
     private Date fechaFin;
 }
