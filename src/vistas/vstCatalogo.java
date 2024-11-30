@@ -6,6 +6,7 @@ package vistas;
 
 import entities.ActualizacionPrecios;
 import entities.AltaServicios;
+import entities.RegistroVenta;
 import entities.Temporada;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -21,6 +22,7 @@ public class vstCatalogo extends javax.swing.JFrame {
     SimpleDateFormat _df = new SimpleDateFormat("dd/MM/yyyy");
     DecimalFormat dfm = new DecimalFormat("#.00");  
     AltaServicios serv = new AltaServicios();
+    RegistroVenta reg = new RegistroVenta();
   
     /**
      * Creates new form vstCatalogo
@@ -115,6 +117,11 @@ public class vstCatalogo extends javax.swing.JFrame {
         });
 
         bntEncerado.setText("agregar");
+        bntEncerado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntEnceradoActionPerformed(evt);
+            }
+        });
 
         bntPulido.setText("agregar");
 
@@ -216,8 +223,14 @@ public class vstCatalogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntVidriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntVidriosActionPerformed
-        serv.setAspirado(ALLBITS);
+        reg.setTotal((serv.getLimpiezaVidrios()*precios.getPrecioLimpiezaVidrio())*1.16);
+        reg.setSubtotal((serv.getLimpiezaVidrios()*precios.getPrecioLimpiezaVidrio()));
+        reg.setIva(serv.getLimpiezaVidrios()*1.16);
     }//GEN-LAST:event_bntVidriosActionPerformed
+
+    private void bntEnceradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEnceradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bntEnceradoActionPerformed
 
     /**
      * @param args the command line arguments

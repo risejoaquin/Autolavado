@@ -10,33 +10,6 @@ package entities;
  */
 public class RegistroVenta {
 
-    /**
-     * @return the Turno
-     */
-    public int getTurno() {
-        return Turno;
-    }
-
-    /**
-     * @param Turno the Turno to set
-     */
-    public void setTurno(int Turno) {
-        this.Turno = Turno;
-    }
-
-    /**
-     * @return the totalTurnos
-     */
-    public int getTotalTurnos() {
-        return totalTurnos;
-    }
-
-    /**
-     * @param totalTurnos the totalTurnos to set
-     */
-    public void setTotalTurnos(int totalTurnos) {
-        this.totalTurnos = totalTurnos;
-    }
 
     /**
      * @return the iva
@@ -80,20 +53,7 @@ public class RegistroVenta {
         this.subtotal = subtotal;
     }
 
-    /**
-     * @return the totalDineroCaja
-     */
-    public double getTotalDineroCaja() {
-        return totalDineroCaja;
-    }
-
-    /**
-     * @param totalDineroCaja the totalDineroCaja to set
-     */
-    public void setTotalDineroCaja(double totalDineroCaja) {
-        this.totalDineroCaja = totalDineroCaja;
-    }
-
+   
     /**
      * @return the costos
      */
@@ -126,12 +86,10 @@ public class RegistroVenta {
     
 
     
-    private int Turno = 0;
-    private int totalTurnos = 0;
+
     private double iva = 0;
     private double total = 0;
     private double subtotal = 0;
-    private double totalDineroCaja = 0;
     private ActualizacionPrecios costos = new ActualizacionPrecios();
     private AltaServicios servicios = new AltaServicios();
     
